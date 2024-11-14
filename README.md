@@ -18,7 +18,7 @@ The command interpreter (CLI) is used to manage and perform operations on AirBnB
 ## Contributors
 
 
-- [Moussa Sabbar
+- Moussa Sabbar
 - Anas Aatef
 
 ---
