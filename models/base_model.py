@@ -26,7 +26,7 @@ class BaseModel:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.datetime.now()
             self.updated_at = datetime.datetime.now()
-            models.storage.new(self)  # storage.new(self.to_dict())
+            # models.storage.new(self)
 
     def __str__(self) -> str:
         """print: [<class name>] (<self.id>) <self.__dict__>
@@ -40,11 +40,14 @@ class BaseModel:
         """updates the public instance attribute updated_at with the
         current datetime
         """
+        # try:
         self.updated_at = datetime.datetime.now()
         # d1 = self.to_dict()
         # print(d1)
         models.storage.new(self)
         models.storage.save()
+        # except PermissionError:
+        #     raise PermissionError("You don't have write permission")
 
     def to_dict(self):
         """returns a dictionary containing all keys/values of the instance
