@@ -51,10 +51,12 @@ section.filters {
 
 .locations:hover .popover {
   display: block;
+  z-index: 20;
 }
 
 .locations .popover ul {
   list-style: none;
+  margin-bottom: 0.83rem;
 }
 .locations .popover h3 {
   font-size: 16px;
@@ -102,6 +104,7 @@ section.filters {
 
 .amenities:hover .popover {
   display: block;
+  z-index: 20;
 }
 /* Button */
 .filters button {
